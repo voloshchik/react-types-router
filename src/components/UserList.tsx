@@ -1,18 +1,19 @@
 import React from 'react'
 import { IUser } from '../types/types'
+import UserItem from './UserItem'
 
 interface UserListProps {
   users: IUser[]
 }
 
-const userList: React.FC<UserListProps> = ({ users }) => {
+const UserList: React.FC<UserListProps> = ({ users }) => {
   return (
     <div>
       {users.map((user) => {
-        return <p>{user.name}</p>
+        return <UserItem user={user} key={user.id} />
       })}
     </div>
   )
 }
 
-export default userList
+export default UserList

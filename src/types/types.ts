@@ -8,5 +8,11 @@ export interface IUser {
   id: number
   name: string
   email: string
-  adress: IAddress
+  address: IAddress
+}
+
+export interface ITodo {
+  id: number
+  title: string
+  complated: boolean
 }
